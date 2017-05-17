@@ -6,7 +6,7 @@ function toUnderscore(string) {
       stringArray[i] = stringArray[i].toLowerCase();
       snakeString += stringArray[i];
     }
-    else if(string[i] === stringArray[i].toUpperCase()){
+    else if(isNaN(stringArray[i]) && string[i] === stringArray[i].toUpperCase()){
       stringArray[i] = "_" + stringArray[i].toLowerCase();
       snakeString += stringArray[i];
     }
@@ -17,4 +17,4 @@ function toUnderscore(string) {
   return snakeString;
 }
 
-console.log(toUnderscore("ThisParticularString"));
+console.log(toUnderscore("This5Particular6String"));
